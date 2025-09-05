@@ -31,6 +31,7 @@ class Book:
 
 books = []
 
+<<<<<<< HEAD
 from typing import List, Dict
 
 def add_book(books_list: List[Dict], book: Dict) -> None:
@@ -43,6 +44,25 @@ def add_book(books_list: List[Dict], book: Dict) -> None:
     """
     books_list.append(book)
 
+=======
+# def add_book(book):
+#     """Thêm sách vào danh sách"""
+#     books.append(book)
+
+def show_books():
+    """Hiển thị tất cả sách dưới dạng bảng"""
+    if not books:
+        print("Danh sách sách trống!")
+        return
+
+    # In tiêu đề bảng
+    print(f"{'ID':<5} {'Title':<25} {'Author':<20} {'Year':<6} {'Status':<10}")
+    print("-" * 70)
+
+    # In từng sách
+    for b in books:
+        print(f"{b.book_id:<5} {b.title:<25} {b.author:<20} {b.year:<6} {b.status:<10}")
+>>>>>>> d0a075093fc2a6d429ce8250aa8c794727798b10
 
 def show_books():
     """Hiển thị tất cả sách"""
