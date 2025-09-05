@@ -20,10 +20,25 @@ def add_student(student):
     """Thêm sinh viên vào danh sách"""
     students.append(student)
 
+# def show_students():
+#     """Hiển thị tất cả sinh viên"""
+#     for s in students:
+#         print(s)
+
 def show_students():
-    """Hiển thị tất cả sinh viên"""
+    """Hiển thị tất cả sinh viên dưới dạng bảng"""
+    if not students:
+        print("Danh sách sinh viên trống!")
+        return
+
+    # In tiêu đề bảng
+    print(f"{'ID':<5} {'Name':<15} {'Major':<10} {'Age':<5}")
+    print("-" * 40)
+
+    # In từng sinh viên
     for s in students:
-        print(s)
+        print(f"{s.student_id:<5} {s.name:<15} {s.major:<10} {s.age:<5}")
+
 
 def find_student_by_id(student_id):
     """Tìm sinh viên theo ID"""
