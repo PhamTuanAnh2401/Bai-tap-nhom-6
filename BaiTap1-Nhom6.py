@@ -107,3 +107,4 @@ print("\nAdding student from string:")
 new_student = Student.from_string("5|Hoa|Duoc|24")
 add_student(new_student)
 show_students()
+# Demo sử dụng lớp quản lý sinh viên
