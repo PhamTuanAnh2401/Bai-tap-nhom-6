@@ -1,39 +1,58 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Lớp Book thể hiện 1 cuốn sách
+/**
+ * Lớp Book đại diện cho một cuốn sách.
+ */
 class Book {
-    private int id;
-    private String title;
-    private String author;
+    private final int id;
+    private final String title;
+    private final String author;
 
-    // Constructor
     public Book(int id, String title, String author) {
         this.id = id;
         this.title = title;
         this.author = author;
     }
 
-    // Getter
     public int getId() { return id; }
+
     public String getTitle() { return title; }
+
     public String getAuthor() { return author; }
 
-    // toString để in sách rõ ràng
     @Override
     public String toString() {
         return String.format("ID: %d | Tên sách: %s | Tác giả: %s", id, title, author);
     }
 }
 
-public class CleanCode {
-    public static void main(String[] args) {
-        // Dùng List thay vì ArrayList để dễ thay đổi
-        List<Book> books = new ArrayList<>();
+/**
+ * Ứng dụng quản lý sách.
+ */
+public class BookManager {
 
+    public static void main(String[] args) {
+        List<Book> books = createBooks();
+
+        printBooks(books);
+    }
+
+    /**
+     * Tạo danh sách sách mẫu.
+     */
+    private static List<Book> createBooks() {
+        List<Book> books = new ArrayList<>();
         books.add(new Book(1, "Lập trình C", "Nguyen Van A"));
         books.add(new Book(2, "Cấu trúc dữ liệu", "Tran Thi B"));
+        return books;
+    }
 
+    /**
+     * In ra danh sách sách.
+     */
+    private static void printBooks(List<Book> books) {
+        System.out.println("Danh sách sách:");
         for (Book book : books) {
             System.out.println(book);
         }
