@@ -31,6 +31,18 @@ class Book:
 
 books = []
 
+<<<<<<< HEAD
+from typing import List, Dict
+
+def add_book(books_list: List[Dict], book: Dict) -> None:
+    """
+    Thêm một sách vào danh sách sách.
+
+    Args:
+        books_list (List[Dict]): Danh sách sách hiện có.
+        book (Dict): Thông tin sách cần thêm, ví dụ {'title': str, 'author': str}.
+    """
+    books_list.append(book)
 # def add_book(book):
 #     """Thêm sách vào danh sách"""
 #     books.append(book)

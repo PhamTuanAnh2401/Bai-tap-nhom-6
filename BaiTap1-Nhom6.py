@@ -16,9 +16,17 @@ class Student:
 
 students = []
 
-def add_student(student):
-    """Thêm sinh viên vào danh sách"""
-    students.append(student)
+def add_student(students_list, student):
+    """
+    Thêm một sinh viên vào danh sách sinh viên.
+    
+    Args:
+        students_list (list): Danh sách sinh viên hiện có.
+        student (dict): Thông tin sinh viên cần thêm.
+    """
+    students_list.append(student)
+    return students_list
+
 
 # def show_students():
 #     """Hiển thị tất cả sinh viên"""
