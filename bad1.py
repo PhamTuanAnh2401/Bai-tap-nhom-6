@@ -65,3 +65,4 @@ if __name__ == "__main__":
     manager.update_student(2, name="Lan Nguyễn", age=22)
     for s in manager.get_all_students():
         print(s)
+# comment vi du moi
