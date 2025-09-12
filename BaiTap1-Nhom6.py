@@ -102,6 +102,7 @@ update_student("4", name="Mai", major="KinhTe", age=25)
 print("\nAll students after changes:")
 show_students()
 
+#test
 # Demo chuyển đổi từ chuỗi sang đối tượng Student
 print("\nAdding student from string:")
 new_student = Student.from_string("5|Hoa|Duoc|24")
